@@ -1,0 +1,61 @@
+{
+	"name": "express-demo",
+	"version": "0.0.0",
+	"description": "A very lovely package. Hooray!",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tmd913/express-demo"
+	},
+	"license": "MIT",
+	"author": {
+		"email": "tdennis913@gmail.com"
+	},
+	"type": "module",
+	"main": "./lib/index.js",
+	"files": [
+		"LICENSE.md",
+		"README.md",
+		"lib/",
+		"package.json"
+	],
+	"scripts": {
+		"build": "tsup",
+		"format": "prettier .",
+		"lint": "eslint . --max-warnings 0",
+		"lint:knip": "knip",
+		"prepare": "husky",
+		"test": "vitest",
+		"tsc": "tsc"
+	},
+	"lint-staged": {
+		"*": "prettier --ignore-unknown --write"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.17.0",
+		"@release-it/conventional-changelog": "^9.0.3",
+		"@types/node": "^22.10.2",
+		"@vitest/coverage-v8": "^2.1.8",
+		"@vitest/eslint-plugin": "^1.1.20",
+		"console-fail-test": "^0.5.0",
+		"eslint": "^9.17.0",
+		"eslint-plugin-n": "^17.15.0",
+		"husky": "^9.1.7",
+		"knip": "^5.41.1",
+		"lint-staged": "^15.2.11",
+		"prettier": "^3.4.2",
+		"prettier-plugin-curly": "^0.3.1",
+		"prettier-plugin-packagejson": "^2.5.6",
+		"prettier-plugin-sh": "^0.14.0",
+		"release-it": "^17.10.0",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.2",
+		"typescript-eslint": "^8.18.1",
+		"vitest": "^2.1.8"
+	},
+	"engines": {
+		"node": ">=18.3.0"
+	},
+	"publishConfig": {
+		"provenance": true
+	}
+}
